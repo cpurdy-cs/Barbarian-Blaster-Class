@@ -15,8 +15,7 @@ func _process(delta: float) -> void:
 	ray_cast_3d.target_position = project_local_ray_normal(mouse_position) * 100.0
 	# update the ray_cast_3d immediately
 	ray_cast_3d.force_raycast_update()
-	
-	#printt(ray_cast_3d.get_collider(), ray_cast_3d.get_collision_point())
+
 	
 	if ray_cast_3d.is_colliding() and bank.gold >= tower_cost:
 		var collider = ray_cast_3d.get_collider()
