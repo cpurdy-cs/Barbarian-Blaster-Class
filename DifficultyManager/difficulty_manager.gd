@@ -5,8 +5,11 @@ extends Node
 @export var enemy_health_curve : Curve
 @onready var timer: Timer = $Timer
 
+signal stop_spawning_enemies
+
 func _ready() -> void:
 	timer.start(game_length)
+	Engine.time_scale = 5
 	
 func _process(delta: float) -> void:
 	pass
@@ -19,3 +22,7 @@ func get_spawn_time() -> float:
 	
 func get_enemy_health() -> float:
 	return enemy_health_curve.sample(game_progress_ratio())
+
+
+func _on_timer_timeout() -> void:
+	stop_spawning_enemies.emit()
