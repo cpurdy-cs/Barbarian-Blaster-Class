@@ -78,9 +78,10 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="EnemyPath" type="Path3D" parent="." unique_id=196923056 node_paths=PackedStringArray("difficulty_manager")]
+[node name="EnemyPath" type="Path3D" parent="." unique_id=196923056 node_paths=PackedStringArray("victory_layer", "difficulty_manager")]
 curve = SubResource("Curve3D_bo3yr")
 script = ExtResource("3_2elnx")
+victory_layer = NodePath("../VictoryLayer")
 enemy_scene = ExtResource("2_5vx1e")
 difficulty_manager = NodePath("../DifficultyManager")
 
@@ -162,6 +163,7 @@ label_settings = SubResource("LabelSettings_2elnx")
 enemy_health_curve = SubResource("Curve_xjg0i")
 
 [node name="VictoryLayer" parent="." unique_id=479786153 instance=ExtResource("10_ykwpl")]
+visible = false
 
 [connection signal="timeout" from="EnemyPath/Timer" to="EnemyPath" method="_on_timer_timeout"]
 [connection signal="stop_spawning_enemies" from="DifficultyManager" to="EnemyPath" method="_on_difficulty_manager_stop_spawning_enemies"]
