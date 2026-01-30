@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cawq8t1qy1cjm" path="res://UI/victory_layer.gd" id="1_4etjl"]
 [ext_resource type="Texture2D" uid="uid://dvkq2o8rrv4hb" path="res://Assets/star.png" id="2_eu0p7"]
+[ext_resource type="FontFile" uid="uid://dbxhf8ojmp65w" path="res://Assets/Bungee-Regular.ttf" id="2_h85xe"]
+
+[sub_resource type="Theme" id="Theme_sgjkq"]
+default_font = ExtResource("2_h85xe")
 
 [sub_resource type="LabelSettings" id="LabelSettings_xjg0i"]
 font_size = 100
@@ -23,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_sgjkq")
 
 [node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=615104607]
 custom_minimum_size = Vector2(400, 400)

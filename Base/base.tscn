@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bi5e6k18ll8yd" path="res://Base/base.gd" id="1_u1x2a"]
 [ext_resource type="PackedScene" uid="uid://ce7xrahumubrh" path="res://Assets/Base.glb" id="2_n5f2c"]
+[ext_resource type="FontFile" uid="uid://dbxhf8ojmp65w" path="res://Assets/Bungee-Regular.ttf" id="3_ws5nf"]
 
 [node name="Base" type="Node3D" unique_id=884357418 groups=["base"]]
 script = ExtResource("1_u1x2a")
@@ -13,5 +14,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.235345, 0)
 billboard = 1
 no_depth_test = true
 text = "5"
+font = ExtResource("3_ws5nf")
 font_size = 500
 outline_size = 100
